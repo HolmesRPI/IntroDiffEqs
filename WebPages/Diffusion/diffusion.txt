@@ -1,0 +1,32 @@
+
+Brownian motion: this is the random motion of particles suspended in a fluid.  There are many videos online showing this, and a couple of examples are:
+
+	EXAMPLE1  https://www.youtube.com/watch?v=gPMVaAnij88
+
+	EXAMPLE2  https://www.youtube.com/watch?v=TDHhukuupL8
+
+
+Question: if you start out with a group of randomly moving particles, how does the spatial location of the group change over time?  
+
+
+Answer (due to Einstein):  If the particles move back and forth along the x-axis, and each time that a particle jumps it is equally likely to go left or right, then the concentration of the particles is determined by the diffusion equation.  So, if u(x,t) is the concentration of particles at a and time t, then 
+
+Video proof of Einstein's answer:  The video below starts out with 1000 particles located at x=0.  At each time step, a particle jumps to the left or right with equal probability.  So, at t=1 the are about 500 particles at x=-1 and another 500 at x=1.  At t=2 there are about 500 at x=0 and 250 at x=-2 and at x=2.  The locations of the particles is shown in the upper figure in the video.  In the lower plot the number per bin is shown along with the corresponding solution of the diffusion equation.  It is seen that except at the very beginning (i.e., t near 0) that u(x,t) provides a good approximation of the number of particles in each location. 
+
+
+Einstein's paper: The paper is HERE.  Some highlights in the paper: the ideal gas law on page 550, Taylor's theorem on page 557, and the diffusion equation on page 558 (it is the only equation that is numbered in the paper).  The solution is also given on page 558.
+
+Make your Own Video: the MATLAB code used to create this video is HERE.  You will need to modify the location of the video file on line 6.  You will also need to download 2 other MATLAB files, located HERE and HERE.
+
+
+
+
+
+
+
+
+https://www.youtube.com/watch?v=gPMVaAnij88
+
+
+https://www.youtube.com/watch?v=TDHhukuupL8
+

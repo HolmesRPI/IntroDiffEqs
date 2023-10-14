@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel=StyleSheet href="style.css" type="text/css">
+<meta name="robots" content="noindex,nofollow">
+<title>Diffusion Intro</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<p>
+<b><font size=5 color="#990000">Diffusion Equation, Random Walks, and Einstein</font></b>
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <img src="bron2.png" width=500 alt="random walk" >
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <a href="blum.2006.mpeg">Video</a> obtained in the original experiment. Reference: "Measurement of the Translational and Rotational Brownian Motion of Individual Particles in a Rarefied Gas,"
+by J. Blum, et al, Physical Review Letters (2006).
+<p>
+&nbsp;&nbsp;
+<p>
+<b><font  size=4  color="#990000">Brownian Motion and Random Walks</font></b>
+<p>
+This is the random motion observed with particles suspended in a fluid.  In Brown's original experiment, he saw that pollen granules suspended in water were in constant motion, 
+never appearing to slow or stop, and following irregular paths (similar to the one shown above). What is happening is that the granules, which are approximately 2 microns in length, 
+are under constant bombardment by the surrounding water molecules.  Although the latter are much smaller, having a diameter of approximately 3 x 10^{-4} microns, 
+there are many of them and they are responsible for a very large number of random impacts on each granule. 
+The irregular nature of this forcing gives rise to the randomness of the motion.
+
+
+
+There are many online videos showing this, and a couple of examples are:
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a href="https://www.youtube.com/watch?v=gPMVaAnij88">Example 1</a>
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a href="https://www.youtube.com/watch?v=TDHhukuupL8">Example 2</a>
+<p>
+<hr>
+<p>
+<b><font  size=4  color="#990000">Question:</font></b>
+If you start out with a group of particles, where each one follows a random path similar to the one above, how does the spatial distribution of the group change over time? 
+<p>
+<font size=4   color="#990000">Answer (due to Einstein):</font>  If the particles move back and forth along the x-axis, and each time that a particle jumps it is 
+equally likely to go left or right, then the concentration of the particles is determined by the diffusion equation.  
+So, if u(x,t) is the concentration of particles at x and time t, then &nbsp; Du_xx = u_t.
+<p style="margin-bottom:0.6cm; margin-top:0.6cm;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <img  class="center" src="random2.png" width=620 alt="random walk" >
+<p>
+<hr>
+<p>
+<b><font  size=4   color="#990000">Video proof of Einstein's answer</font></b>
+<p>
+The video starts out with 1000 particles located at x=0.  At each time step, each particle jumps to the left or right 
+with equal probability.  So, at t=1 there are about 500 particles at x=-1 and another 500 at x=1.  
+At t=2 there are about 500 particles at x=0 and 250 at x=-2 and at x=2.  
+The locations of the particles are shown in the upper figure in the video.  
+In the lower plot the number per bin is shown along with the corresponding solution of the diffusion equation.  
+It is seen that except at the very beginning (i.e., t near 0) that u(x,t) provides a good approximation 
+of the number of particles at each location, as predicted by Einstein.
+<p>
+The video is <a href="bins.mp4">HERE</a>.  Left click: to stream video, Right click: to download video.  Suggestion:  use the slider at the bottom to manually progress the video (versus just letting it run at its own speed).
+<p>
+<hr>
+<p>
+<b><font  size=4   color="#990000">Extras</font></b>
+<p>
+<font size=4  color="#990000">Einstein's paper:</font> The paper is <a href="Uber die von der molekularkinetischen Theorie der Warme geforderte Bewegung von in ruhenden Flussigkeiten suspendierten Teilchen.pdf">HERE</a>.  
+Some highlights in the paper are: the ideal gas law on page 550, 
+Taylor's theorem on page 557, and the diffusion equation on page 558 (it is the only equation that is numbered in the paper).  
+The solution is also given on page 558.
+<p>
+<font  size=4 color="#990000">Make your Own Video:</font> the MATLAB code used to create this video is <a href="bins_mov.m" download>HERE</a>.  
+You will need to modify the location of the video file on line 6.  
+You will also need to download 2 other MATLAB files, located <a href="subaxis.m" download>HERE</a> and <a href="parseArgs.m" download>HERE</a>.
+<p>
+<hr> 
+<p>
+<b><font  size=4   color="#990000">References</font></b>
+<p>
+<em>Introduction to the Foundations of Applied Mathematics, 2nd Edition</em> by Mark H. Holmes (Springer, ISBN 978-3-030-24260-2).  Chapter 4 explores the connections between random walks and the diffusion equation, 
+and derives some of the solutions that are obtained from these connections.
+<p>
+<em>Asymmetric random walks and drift-diffusion</em> by M. Holmes (Europhysics Letters, Vol 102, Num 3, DOI 10.1209/0295-5075/102/30005). Extends Einstein's approach 
+to the case of when the probability of jumping left is not necessarily equal to the probability of jumpting right. 
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
