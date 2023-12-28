@@ -1,56 +1,91 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-    "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <link rel=StyleSheet href="style.css" type="text/css">
-<meta name="robots" content="noindex,nofollow">
 <title>Diffusion Intro</title>
 </head>
 <body bgcolor="#FFFFFF">
 
 <p>
-<b><font size=5 color="#990000">Diffusion Equation, Random Walks, and Einstein</font></b>
+<b><font size=5 color="#990000">Diffusion Equation, Einstein, and AI Generated Images</font></b>
+<p style="margin-bottom:40px;">
+<figure> <img src="bron.pdf" width=300 alt="random walk"> 
+<figcaption "padding: 10px">Path recorded for a particle undergoing Brownian motion.  The black bar is 10 microns.</figcaption>
+</figure>
 <p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <img src="bron2.png" width=500 alt="random walk" >
-<p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <a href="blum.2006.mpeg">Video</a> obtained in the original experiment. Reference: "Measurement of the Translational and Rotational Brownian Motion of Individual Particles in a Rarefied Gas,"
+<a href="blum.2006.mpeg">Video</a> from the experiment. The particle is shown on the left, and its recorded positions are on the right. Reference: "Measurement of the Translational and Rotational Brownian Motion of Individual Particles in a Rarefied Gas,"
 by J. Blum, et al, Physical Review Letters (2006).
-<p>
-&nbsp;&nbsp;
-<p>
+<p style="margin-top:40px;">
 <b><font  size=4  color="#990000">Brownian Motion and Random Walks</font></b>
 <p>
-This is the random motion observed with particles suspended in a fluid.  In Brown's original experiment, he saw that pollen granules suspended in water were in constant motion, 
-never appearing to slow or stop, and following irregular paths (similar to the one shown above). What is happening is that the granules, which are approximately 2 microns in length, 
+When looking through a microscope at pollen granules suspended in water, Robert Brown saw that they were in constant motion, 
+never appearing to slow down or stop, and following irregular paths, similar to the path shown above.   What is happening is that the granules, which are approximately 2 microns in length, 
 are under constant bombardment by the surrounding water molecules.  Although the latter are much smaller, having a diameter of approximately 3 x 10^{-4} microns, 
 there are many of them and they are responsible for a very large number of random impacts on each granule. 
-The irregular nature of this forcing gives rise to the randomness of the motion.
-
-
-
-There are many online videos showing this, and a couple of examples are:
+The irregular nature of this forcing gives rise to the randomness of the motion. There are many online videos showing this, and a couple of examples are: <a href="https://www.youtube.com/watch?v=gPMVaAnij88">Example 1</a>
+and <a href="https://www.youtube.com/watch?v=TDHhukuupL8">Example 2</a>.
 <p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a href="https://www.youtube.com/watch?v=gPMVaAnij88">Example 1</a>
+In what follows the particle path in the above figure is described as a random walk.  After making this statement it is probably best to say that for those who 
+are picky about having a 
+rigorous mathematical development, versus the more loosey goosey version presented here,
+you should consider the references at the end.
+<p style="margin-bottom:30px;">
+<hr>
 <p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a href="https://www.youtube.com/watch?v=TDHhukuupL8">Example 2</a>
+<b><font  size=4  color="#990000">Question</font></b>
+<p>
+Suppose that you start out with a group of particles, and they occupy a particular region.  
+For example, in the figure below 11 particles occupy a triangular shaped region. 
+<figure> <img src="t0.png" width=300 alt="random walk"> 
+</figure>
+The question is, what happens to the triangular shape once each particle starts doing a random walk?  To answer this it helps if more particles are 
+used.  So, in the figure below there are 250,000 particles and they occupy a triangular region at t=0 (the region appears to be solid blue 
+because there are so many 
+particles).  Their random walk positions are then determined using a computer, and the resulting distributions at t=10 and at t=100 are shown below.  
+What is seen is that the triangular region evolves into a circular region that expands over time. If you are interested in the video produced in this 
+simulation it is <a href="dots.mp4">HERE</a>.
+<p>
+<p style="margin-bottom:0.1cm;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<figure> <img src="diff100.png" width=800 alt="random walk"> 
+<figcaption "padding: 10px">Positions of 250,000 particles each undergoing a random walk.</figcaption>
+</figure>
+<p style="margin-bottom:20px;">
+<hr>
+<p>
+<b><font size=4   color="#990000">Einstein's Answer</font></b>   
+<p>
+Einstein realized that the distribution of the particles is 
+determined by the diffusion equation.  To prove this he considered the 
+simpler case of when the particles move back and forth along the x-axis as illustrated in the figure below.  
+He assumed that each time a particle moves it is 
+equally likely to go left or right.  He then showed that if u(x,t) is the concentration of the particles  at x and time t, 
+then &nbsp; 
+
+<math xmlns = "http://www.w3.org/1998/Math/MathML">
+		
+         <mrow>
+            <msub><mi>D u</mi><mn>xx</mn></msub>
+            <mo> = </mo>
+            <msub><mi>u</mi><mn>t</mn></msub>
+         </mrow>
+			
+      </math>
+      
+      
+<p style="margin-bottom:0.6cm; margin-top:0.6cm;">
+<figure> <img src="random.png" width=400 alt="random"> 
+<figcaption "padding: 10px">In the random walk, at each time step the particle moves a fixed distance to the right or left with equal probability.</figcaption>
+</figure>
 <p>
 <hr>
 <p>
-<b><font  size=4  color="#990000">Question:</font></b>
-If you start out with a group of particles, where each one follows a random path similar to the one above, how does the spatial distribution of the group change over time? 
+<b><font  size=4   color="#990000">Video Proof of Einstein's Answer</font></b>
 <p>
-<font size=4   color="#990000">Answer (due to Einstein):</font>  If the particles move back and forth along the x-axis, and each time that a particle jumps it is 
-equally likely to go left or right, then the concentration of the particles is determined by the diffusion equation.  
-So, if u(x,t) is the concentration of particles at x and time t, then &nbsp; Du_xx = u_t.
-<p style="margin-bottom:0.6cm; margin-top:0.6cm;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <img  class="center" src="random2.png" width=620 alt="random walk" >
-<p>
-<hr>
-<p>
-<b><font  size=4   color="#990000">Video proof of Einstein's answer</font></b>
-<p>
-The video starts out with 1000 particles located at x=0.  At each time step, each particle jumps to the left or right 
-with equal probability.  So, at t=1 there are about 500 particles at x=-1 and another 500 at x=1.  
-At t=2 there are about 500 particles at x=0 and 250 at x=-2 and at x=2.  
+The video starts out with 1000 particles located at x=0.  The first frame of the video is shown below, on the left.  To better visualize the individual particles, they are 
+shown occupying a small interval (called a bin) centered at x=0.  At each time step, each particle jumps to the left or right 
+with equal probability.  So, at t=1 there are about 500 particles at x=-1 and another 500 at x=1.  At t=2 there are about 500 particles at x=0 and 250 at x=-2 
+and at x=2  (the frame of the video is shown below).  
 The locations of the particles are shown in the upper figure in the video.  
 In the lower plot the number per bin is shown along with the corresponding solution of the diffusion equation.  
 It is seen that except at the very beginning (i.e., t near 0) that u(x,t) provides a good approximation 
@@ -58,19 +93,45 @@ of the number of particles at each location, as predicted by Einstein.
 <p>
 The video is <a href="bins.mp4">HERE</a>.  Left click: to stream video, Right click: to download video.  Suggestion:  use the slider at the bottom to manually progress the video (versus just letting it run at its own speed).
 <p>
+<img src="0.png" width=500 alt="t=0" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="2.png" width=500 alt="t=4" >
+<p style="margin-bottom:30px;">
+<hr>
+<p>
+<b><font size=4   color="#990000">New Question: Can You Go Backwards?</font></b>   
+<p>
+For the 250,000 particle simulation above, given the random jumps being made, 
+it is impossible to start with the distribution at t=100 and then determine what the distribution was at t=0. 
+There is, however, a possible way this might be done if you are willing to modify the situation a bit and also 
+know about neural networks.  To explain how, suppose you are told that at t=0 the region was either a triangle, 
+a rectangle, or a star shaped region.  You then train your neural network by running the above 250,000 particle simulation using a wide variety of triangle, 
+rectangle and star shaped regions.  This allows the neural network to learn how to distinguish between the three given shapes.  Once complete, given the t=100 
+result above, your neural network would be able to tell you what was likely the original image.  This idea is what (very roughly) underlies 
+ Stable Diffusion, a latent diffusion based neural network for producing images based on a text prompt.  To illustrate, suppose you have 
+ a very noisy image of color pixels as shown on the left in the figure below.  If you tell Stable Diffusion 
+that this was originally a picture of an astronaut riding a horse, it will then construct the mostly likely image that does this 
+ (based on what information it was trained on).  The result is on the right (this photo is discussed on the Wikipedia page for Stable Diffusion located <a href="https://en.wikipedia.org/wiki/Stable_Diffusion">HERE</a>).
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp; <img src="1000.jpg" width=170 alt="t=0" > &nbsp;&nbsp;   <img src="stablediffusuion.png" width=150 alt="t=4" >    &nbsp;&nbsp; <img src="Astronaut.jpg" width=170 alt="t=4" >
+<p>
+
+
+
+
+<p style="margin-bottom:30px;">
 <hr>
 <p>
 <b><font  size=4   color="#990000">Extras</font></b>
 <p>
-<font size=4  color="#990000">Einstein's paper:</font> The paper is <a href="Uber die von der molekularkinetischen Theorie der Warme geforderte Bewegung von in ruhenden Flussigkeiten suspendierten Teilchen.pdf">HERE</a>.  
+<font size=4  color="#990000">Einstein's paper:</font> The paper is 
+<a href="Uber die von der molekularkinetischen Theorie der Warme geforderte Bewegung von in ruhenden Flussigkeiten suspendierten Teilchen.pdf">HERE</a>.   
 Some highlights in the paper are: the ideal gas law on page 550, 
-Taylor's theorem on page 557, and the diffusion equation on page 558 (it is the only equation that is numbered in the paper).  
-The solution is also given on page 558.
+Taylor's theorem on page 557, and the diffusion equation on page 558 (it is the only equation in the paper that is numbered).  
+The solution is also given on page 558.   An English translation of the paper is <a href="Einstein_1905.pdf">HERE</a>.
 <p>
 <font  size=4 color="#990000">Make your Own Video:</font> the MATLAB code used to create this video is <a href="bins_mov.m" download>HERE</a>.  
 You will need to modify the location of the video file on line 6.  
 You will also need to download 2 other MATLAB files, located <a href="subaxis.m" download>HERE</a> and <a href="parseArgs.m" download>HERE</a>.
-<p>
+<p style="margin-bottom:40px;">
 <hr> 
 <p>
 <b><font  size=4   color="#990000">References</font></b>
@@ -80,7 +141,9 @@ and derives some of the solutions that are obtained from these connections.
 <p>
 <em>Asymmetric random walks and drift-diffusion</em> by M. Holmes (Europhysics Letters, Vol 102, Num 3, DOI 10.1209/0295-5075/102/30005). Extends Einstein's approach 
 to the case of when the probability of jumping left is not necessarily equal to the probability of jumpting right. 
-
+<p>
+<hr> 
+<p style="margin-bottom:1cm;">
 
 
 </body>

@@ -1,4 +1,21 @@
 BODY	{ background: white;
-		font-family: Arial, Helvetica }
+		font-family: Arial, Helvetica;
+		font-size: 18px;
+		 }
 
-H1		{ color: #990000 }
+
+H1		{ color: #990000; font-size: 3.5rem; }
+
+figcaption {
+  %background-color: black;
+  color: black;
+  font-style: italic;
+  padding: 20px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+
+
+
+

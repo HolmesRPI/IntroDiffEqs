@@ -72,6 +72,10 @@ axis([-M M 0 P])
 say=['Holmes, 2023'];
 text(M-2,-P/5.5,say,'FontSize',10,'FontWeight','bold')
 
+
+exportgraphics(gcf,'/Users/mark/Desktop/0.png')
+
+
 writeVideo(vid0,getframe(gcf));
 
 %return
@@ -144,6 +148,10 @@ for it=1:N
     F = getframe(gcf);
     for i=1:frames
         writeVideo(vid0 ,F);
+    end
+
+    if it==2
+        exportgraphics(gcf,'/Users/mark/Desktop/2.png')
     end
 
     %pause
